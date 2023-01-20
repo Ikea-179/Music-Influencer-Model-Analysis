@@ -43,6 +43,7 @@ Apart from the general picture, the network also shows details of in- or out-edg
 The model for the influence indicator uses the comprehensive evaluation concept. The comprehensive evaluation method aims to turn variables in different fields and with different units into a uniform variable, namely the grade. In this problem, we can easily develop an indicator in the unit of “follower(s)”. More followers indicate more influence. As a result, the problem turns into how to evaluate a follower. There are four evaluation factors for the “quality” on a follower: I. The number of influencers the follower claims to have; II. Whether the follower chooses the same genre with the influencer; III. The time gap between the influencer and the follower to become active; IV. The influence of the follower himself. These evaluation factors are in different directions, for which we can use the comprehensive evaluation measure to turn them into a uniform and easy-to-calculate unit: “follower(s)”. In other words, we give four parameters <img src="Figure/Equation1.png" alt="Equation1" style="zoom:50%;" />
 
  to represent these four factors, and count the follower in question as
+
 <img src="Figure/Equation2.png" alt="Equation2" style="zoom:67%;" />
 
 Summing up all direct followers of the influencer in this form, we get a numerical parameter as the influence indicator. Here is the mindmap for the evaluation.
@@ -60,6 +61,6 @@ In the process of building the above two basic models, we observe some interesti
 We also find some correlation between the two basic models: the pair of influencers and followers do show higher similarities than the others. By comparing between influencers with more than 20 followers and their followers with relatively high general similarities, we find the feature of ‘Acousticness’ is easiest to be passed down to the followers, which corresponds to the result of
 what distinguishes a genre 
 
-#### Conclusion
+## Conclusion
 
 In the Social context, music represents characteristics of an era and also in turn presents significant involvement in that time. Our work shows how the influence indicator model and the data network help investigate such topics. On the other hand, the impact of society, technology, and politics on music can also be drawn from t
