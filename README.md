@@ -40,12 +40,11 @@ Apart from the general picture, the network also shows details of in- or out-edg
 
 <center><div style="color:orange; border-bottom: 1px solid #000000; display: inline-block; color: #000000; padding: 2px;">Details of a Node</div></center>
 
-The model for the influence indicator uses the comprehensive evaluation concept. The comprehensive evaluation method aims to turn variables in different fields and with different units into a uniform variable, namely the grade. In this problem, we can easily develop an indicator in the unit of “follower(s)”. More followers indicate more influence. As a result, the problem turns into how to evaluate a follower. There are four evaluation factors for the “quality” on a follower: I. The number of influencers the follower claims to have; II. Whether the follower chooses the same genre with the influencer; III. The time gap between the influencer and the follower to become active; IV. The influence of the follower himself. These evaluation factors are in different directions, for which we can use the comprehensive evaluation measure to turn them into a uniform and easy-to-calculate unit: “follower(s)”. In other words, we give four parameters $\textbf{($\rho$, $m$, $\gamma$, $\omega$) }$
+The model for the influence indicator uses the comprehensive evaluation concept. The comprehensive evaluation method aims to turn variables in different fields and with different units into a uniform variable, namely the grade. In this problem, we can easily develop an indicator in the unit of “follower(s)”. More followers indicate more influence. As a result, the problem turns into how to evaluate a follower. There are four evaluation factors for the “quality” on a follower: I. The number of influencers the follower claims to have; II. Whether the follower chooses the same genre with the influencer; III. The time gap between the influencer and the follower to become active; IV. The influence of the follower himself. These evaluation factors are in different directions, for which we can use the comprehensive evaluation measure to turn them into a uniform and easy-to-calculate unit: “follower(s)”. In other words, we give four parameters <img src="Figure/Equation1.png" alt="Equation1" style="zoom:50%;" />
 
  to represent these four factors, and count the follower in question as
-$$
-\rho \cdot m \cdot \gamma \cdot \omega \cdot 1
-$$
+<img src="Figure/Equation2.png" alt="Equation2" style="zoom:67%;" />
+
 Summing up all direct followers of the influencer in this form, we get a numerical parameter as the influence indicator. Here is the mindmap for the evaluation.
 
 <img src="Figure/mindmap.png" alt="mindmap" style="zoom:80%;" />
@@ -54,7 +53,7 @@ Summing up all direct followers of the influencer in this form, we get a numeric
 
 With the quantified data of characteristics of the music and type of vocals of a song or artist, we build a model to evaluate their similarities. Due to the high dimensions of the data, we applied Principal Component Analysis (PCA) to reduce dimensions for simplification. Based on the features of reduced data, cosine similarity was chosen to repre
 
-In the process of building the above two basic models, we observe some interesting phenomenon about genres: the influence network is more complicated, and similarities are higher among artists in the same genre. Evaluating the importance of features in different genres with the Random Forest algorithm, we found that ’Acousticness’, ’Energy’, ’Danceability’, ’Instrumentalness’, and ’Speechiness’ are the five main factors that distinguish a genre. Different genres sometimes also showed a similar developing trend, like during the wartime or technology rapidly developing time, and some of them share an inherent relationship in a social context.
+In the process of building the above two basic models, we observe some interesting phenomena about genres: the influence network is more complicated, and similarities are higher among artists in the same genre. Evaluating the importance of features in different genres with the Random Forest algorithm, we found that ’Acousticness’, ’Energy’, ’Danceability’, ’Instrumentalness’, and ’Speechiness’ are the five main factors that distinguish a genre. Different genres sometimes also showed a similar developing trend, like during wartime or technology rapidly developing time, and some of them share an inherent relationship in a social context.
 
 <img src="Figure/leida2.png" alt="leida2" style="zoom:60%;" />
 
